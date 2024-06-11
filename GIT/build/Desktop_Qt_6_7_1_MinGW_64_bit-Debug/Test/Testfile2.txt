@@ -1,0 +1,2 @@
+Hello from test file 2
+My name is Khaled
