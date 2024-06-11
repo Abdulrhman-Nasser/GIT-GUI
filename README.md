@@ -44,7 +44,7 @@ This project is a Git GUI Management System developed using Qt. It provides a us
    - Ensure Git is installed on your system and properly configured.
    - Clone this repository:
      ```bash
-     git clone https://github.com/yourusername/git-gui-management-system.git
+     git clone https://github.com/Abdulrhman-Nasser/GIT-GUI.git
      ```
    - Open the Qt project file in Qt Creator.
    - Build and run the project.
