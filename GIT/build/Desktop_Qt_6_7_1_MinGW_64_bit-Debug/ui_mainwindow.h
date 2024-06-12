@@ -41,14 +41,14 @@ public:
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
-    QLineEdit *LE_username;
     QLabel *L_username;
+    QLineEdit *LE_username;
     QHBoxLayout *horizontalLayout_2;
-    QLineEdit *LE_email;
     QLabel *L_;
+    QLineEdit *LE_email;
     QHBoxLayout *horizontalLayout_3;
-    QLineEdit *LE_url;
     QLabel *L_path_4;
+    QLineEdit *LE_url;
     QWidget *init;
     QListWidget *listWidget;
     QPushButton *pb_clear;
@@ -149,45 +149,45 @@ public:
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        LE_username = new QLineEdit(layoutWidget);
-        LE_username->setObjectName("LE_username");
-
-        horizontalLayout->addWidget(LE_username);
-
         L_username = new QLabel(layoutWidget);
         L_username->setObjectName("L_username");
 
         horizontalLayout->addWidget(L_username);
+
+        LE_username = new QLineEdit(layoutWidget);
+        LE_username->setObjectName("LE_username");
+
+        horizontalLayout->addWidget(LE_username);
 
 
         verticalLayout->addLayout(horizontalLayout);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        LE_email = new QLineEdit(layoutWidget);
-        LE_email->setObjectName("LE_email");
-
-        horizontalLayout_2->addWidget(LE_email);
-
         L_ = new QLabel(layoutWidget);
         L_->setObjectName("L_");
 
         horizontalLayout_2->addWidget(L_);
+
+        LE_email = new QLineEdit(layoutWidget);
+        LE_email->setObjectName("LE_email");
+
+        horizontalLayout_2->addWidget(LE_email);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
-        LE_url = new QLineEdit(layoutWidget);
-        LE_url->setObjectName("LE_url");
-
-        horizontalLayout_3->addWidget(LE_url);
-
         L_path_4 = new QLabel(layoutWidget);
         L_path_4->setObjectName("L_path_4");
 
         horizontalLayout_3->addWidget(L_path_4);
+
+        LE_url = new QLineEdit(layoutWidget);
+        LE_url->setObjectName("LE_url");
+
+        horizontalLayout_3->addWidget(LE_url);
 
 
         verticalLayout->addLayout(horizontalLayout_3);
@@ -216,7 +216,7 @@ public:
         groupBox->setGeometry(QRect(540, 30, 311, 251));
         layoutWidget1 = new QWidget(groupBox);
         layoutWidget1->setObjectName("layoutWidget1");
-        layoutWidget1->setGeometry(QRect(0, 30, 311, 212));
+        layoutWidget1->setGeometry(QRect(0, 30, 311, 253));
         verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -405,7 +405,7 @@ public:
         groupBox_3->setGeometry(QRect(420, 30, 111, 251));
         layoutWidget2 = new QWidget(groupBox_3);
         layoutWidget2->setObjectName("layoutWidget2");
-        layoutWidget2->setGeometry(QRect(0, 30, 111, 86));
+        layoutWidget2->setGeometry(QRect(0, 30, 111, 102));
         verticalLayout_4 = new QVBoxLayout(layoutWidget2);
         verticalLayout_4->setObjectName("verticalLayout_4");
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -426,7 +426,7 @@ public:
 
         layoutWidget3 = new QWidget(groupBox_3);
         layoutWidget3->setObjectName("layoutWidget3");
-        layoutWidget3->setGeometry(QRect(0, 140, 110, 56));
+        layoutWidget3->setGeometry(QRect(0, 140, 110, 66));
         verticalLayout_5 = new QVBoxLayout(layoutWidget3);
         verticalLayout_5->setObjectName("verticalLayout_5");
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -447,7 +447,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 874, 21));
+        menubar->setGeometry(QRect(0, 0, 874, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -469,12 +469,12 @@ public:
         pb_start->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
         pb_path->setText(QCoreApplication::translate("MainWindow", "Folder", nullptr));
         L_path->setText(QCoreApplication::translate("MainWindow", "Please choose a path", nullptr));
-        LE_username->setText(QString());
         L_username->setText(QCoreApplication::translate("MainWindow", "Enter User Name", nullptr));
-        LE_email->setText(QString());
+        LE_username->setText(QString());
         L_->setText(QCoreApplication::translate("MainWindow", "       Enter Email", nullptr));
-        LE_url->setText(QString());
+        LE_email->setText(QString());
         L_path_4->setText(QCoreApplication::translate("MainWindow", "            Enter url", nullptr));
+        LE_url->setText(QString());
         pb_clear->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
         pb_back->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         L_currentpath->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));

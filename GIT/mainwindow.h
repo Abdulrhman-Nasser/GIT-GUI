@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QDir>
 #include "dirpath.h"
 #include "gitbash.h"
 QT_BEGIN_NAMESPACE

@@ -238,6 +238,10 @@ Makefile: ../../GIT.pro C:/Qt/6.7.1/mingw_64/mkspecs/win32-g++/qmake.conf C:/Qt/
 		C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_quicktimelineblendtrees_private.pri \
 		C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_quickwidgets.pri \
 		C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_serialbus.pri \
+		C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_serialbus_private.pri \
+		C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_serialport.pri \
+		C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_serialport_private.pri \
 		C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_shadertools.pri \
 		C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_shadertools_private.pri \
 		C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_spatialaudio.pri \
@@ -263,7 +267,6 @@ Makefile: ../../GIT.pro C:/Qt/6.7.1/mingw_64/mkspecs/win32-g++/qmake.conf C:/Qt/
 		C:/Qt/6.7.1/mingw_64/mkspecs/features/qt_config.prf \
 		C:/Qt/6.7.1/mingw_64/mkspecs/win32-g++/qmake.conf \
 		C:/Qt/6.7.1/mingw_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		C:/Qt/6.7.1/mingw_64/mkspecs/features/exclusive_builds.prf \
 		C:/Qt/6.7.1/mingw_64/mkspecs/features/toolchain.prf \
 		C:/Qt/6.7.1/mingw_64/mkspecs/features/default_pre.prf \
@@ -293,8 +296,8 @@ Makefile: ../../GIT.pro C:/Qt/6.7.1/mingw_64/mkspecs/win32-g++/qmake.conf C:/Qt/
 		C:/Qt/6.7.1/mingw_64/lib/Qt6Gui.prl \
 		C:/Qt/6.7.1/mingw_64/lib/Qt6Core.prl \
 		C:/Qt/6.7.1/mingw_64/lib/Qt6EntryPoint.prl \
-		C:/Qt/6.7.1/mingw_64/mkspecs/features/build_pass.prf \
-		../../Images.qrc
+		.qmake.stash \
+		C:/Qt/6.7.1/mingw_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\..\GIT.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/Qt/6.7.1/mingw_64/mkspecs/features/spec_pre.prf:
 C:/Qt/6.7.1/mingw_64/mkspecs/features/device_config.prf:
@@ -464,6 +467,10 @@ C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_quicktimelineblendtrees.pri:
 C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_quicktimelineblendtrees_private.pri:
 C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_quickwidgets.pri:
 C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_serialbus.pri:
+C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_serialbus_private.pri:
+C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_serialport.pri:
+C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_serialport_private.pri:
 C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_shadertools.pri:
 C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_shadertools_private.pri:
 C:/Qt/6.7.1/mingw_64/mkspecs/modules/qt_lib_spatialaudio.pri:
@@ -489,7 +496,6 @@ C:/Qt/6.7.1/mingw_64/mkspecs/features/qt_functions.prf:
 C:/Qt/6.7.1/mingw_64/mkspecs/features/qt_config.prf:
 C:/Qt/6.7.1/mingw_64/mkspecs/win32-g++/qmake.conf:
 C:/Qt/6.7.1/mingw_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 C:/Qt/6.7.1/mingw_64/mkspecs/features/exclusive_builds.prf:
 C:/Qt/6.7.1/mingw_64/mkspecs/features/toolchain.prf:
 C:/Qt/6.7.1/mingw_64/mkspecs/features/default_pre.prf:
@@ -519,8 +525,8 @@ C:/Qt/6.7.1/mingw_64/lib/Qt6Widgets.prl:
 C:/Qt/6.7.1/mingw_64/lib/Qt6Gui.prl:
 C:/Qt/6.7.1/mingw_64/lib/Qt6Core.prl:
 C:/Qt/6.7.1/mingw_64/lib/Qt6EntryPoint.prl:
+.qmake.stash:
 C:/Qt/6.7.1/mingw_64/mkspecs/features/build_pass.prf:
-../../Images.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\GIT.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

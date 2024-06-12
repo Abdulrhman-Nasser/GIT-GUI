@@ -7,6 +7,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setWindowTitle("GetGit");
+    qDebug()<<QDir::currentPath();
+    QIcon windowIcon(QDir::currentPath()+"/back.png");
+    if (windowIcon.isNull()) {
+        qDebug() << "Can't open icon file";
+    } else {
+        setWindowIcon(windowIcon);
+    }
     ui->L_path->setText("");
     path=dirpath.getPath();
     ui->stackedWidget->setCurrentIndex(0);

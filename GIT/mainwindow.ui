@@ -91,16 +91,16 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
-            <widget class="QLineEdit" name="LE_username">
+            <widget class="QLabel" name="L_username">
              <property name="text">
-              <string/>
+              <string>Enter User Name</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="L_username">
+            <widget class="QLineEdit" name="LE_username">
              <property name="text">
-              <string>Enter User Name</string>
+              <string/>
              </property>
             </widget>
            </item>
@@ -109,16 +109,16 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <widget class="QLineEdit" name="LE_email">
+            <widget class="QLabel" name="L_">
              <property name="text">
-              <string/>
+              <string>       Enter Email</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="L_">
+            <widget class="QLineEdit" name="LE_email">
              <property name="text">
-              <string>       Enter Email</string>
+              <string/>
              </property>
             </widget>
            </item>
@@ -127,16 +127,16 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
-            <widget class="QLineEdit" name="LE_url">
+            <widget class="QLabel" name="L_path_4">
              <property name="text">
-              <string/>
+              <string>            Enter url</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="L_path_4">
+            <widget class="QLineEdit" name="LE_url">
              <property name="text">
-              <string>            Enter url</string>
+              <string/>
              </property>
             </widget>
            </item>
@@ -225,7 +225,7 @@
            <x>0</x>
            <y>30</y>
            <width>311</width>
-           <height>212</height>
+           <height>253</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -478,7 +478,7 @@
            <x>0</x>
            <y>30</y>
            <width>111</width>
-           <height>86</height>
+           <height>102</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -507,7 +507,7 @@
            <x>0</x>
            <y>140</y>
            <width>110</width>
-           <height>56</height>
+           <height>66</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -539,7 +539,7 @@
      <x>0</x>
      <y>0</y>
      <width>874</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
