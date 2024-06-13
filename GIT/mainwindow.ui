@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>874</width>
-    <height>640</height>
+    <width>921</width>
+    <height>697</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0">
+    <item row="0" column="1">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="styleSheet">
        <string notr="true"/>
@@ -30,7 +30,7 @@
        <widget class="QPushButton" name="pb_start">
         <property name="geometry">
          <rect>
-          <x>310</x>
+          <x>340</x>
           <y>460</y>
           <width>171</width>
           <height>41</height>
@@ -54,6 +54,9 @@
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Folder</string>
@@ -92,8 +95,11 @@
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
             <widget class="QLabel" name="L_username">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="text">
-              <string>Enter User Name</string>
+              <string>User Name </string>
              </property>
             </widget>
            </item>
@@ -109,9 +115,9 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <widget class="QLabel" name="L_">
+            <widget class="QLabel" name="L_email">
              <property name="text">
-              <string>       Enter Email</string>
+              <string>  E-mail      </string>
              </property>
             </widget>
            </item>
@@ -127,9 +133,9 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
-            <widget class="QLabel" name="L_path_4">
+            <widget class="QLabel" name="L_url">
              <property name="text">
-              <string>            Enter url</string>
+              <string>URL            </string>
              </property>
             </widget>
            </item>
@@ -144,15 +150,52 @@
          </item>
         </layout>
        </widget>
+       <widget class="QSplitter" name="splitter">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>470</y>
+          <width>148</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QLabel" name="L_light">
+         <property name="text">
+          <string>Light</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="horizontalSlider">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximum">
+          <number>1</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="L_dark">
+         <property name="text">
+          <string>Dark</string>
+         </property>
+        </widget>
+       </widget>
       </widget>
       <widget class="QWidget" name="init">
        <widget class="QListWidget" name="listWidget">
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>20</y>
+          <y>40</y>
           <width>411</width>
-          <height>551</height>
+          <height>561</height>
          </rect>
         </property>
         <property name="verticalScrollBarPolicy">
@@ -172,7 +215,7 @@
         <property name="geometry">
          <rect>
           <x>490</x>
-          <y>550</y>
+          <y>600</y>
           <width>80</width>
           <height>24</height>
          </rect>
@@ -185,7 +228,7 @@
         <property name="geometry">
          <rect>
           <x>730</x>
-          <y>550</y>
+          <y>600</y>
           <width>80</width>
           <height>24</height>
          </rect>
@@ -213,7 +256,7 @@
           <x>540</x>
           <y>30</y>
           <width>311</width>
-          <height>251</height>
+          <height>311</height>
          </rect>
         </property>
         <property name="title">
@@ -225,7 +268,7 @@
            <x>0</x>
            <y>30</y>
            <width>311</width>
-           <height>253</height>
+           <height>281</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -310,7 +353,7 @@
         <property name="geometry">
          <rect>
           <x>420</x>
-          <y>290</y>
+          <y>340</y>
           <width>431</width>
           <height>261</height>
          </rect>
@@ -528,6 +571,13 @@
          </layout>
         </widget>
        </widget>
+       <zorder>listWidget</zorder>
+       <zorder>pb_clear</zorder>
+       <zorder>pb_back</zorder>
+       <zorder>L_currentpath</zorder>
+       <zorder>groupBox_2</zorder>
+       <zorder>groupBox_3</zorder>
+       <zorder>groupBox</zorder>
       </widget>
      </widget>
     </item>
@@ -538,7 +588,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>874</width>
+     <width>921</width>
      <height>25</height>
     </rect>
    </property>

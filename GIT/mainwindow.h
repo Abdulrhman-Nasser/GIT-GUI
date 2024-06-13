@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QDir>
+#include <QGraphicsDropShadowEffect>
 #include "dirpath.h"
 #include "gitbash.h"
 QT_BEGIN_NAMESPACE
@@ -19,7 +20,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    void applyShadowAndStyle(QPushButton* button, const QString backgroundColor, const QString hoverColor, const QString textColor);
+    void DarkMode();
+    void LightMode();
 
 private slots:
     void on_pb_path_clicked();
@@ -57,6 +60,8 @@ private slots:
     void on_pb_merge_clicked();
 
     void on_pb_push_clicked();
+
+    void on_horizontalSlider_valueChanged(int value);
 
 signals:
     void UpdateOptions(QString path);

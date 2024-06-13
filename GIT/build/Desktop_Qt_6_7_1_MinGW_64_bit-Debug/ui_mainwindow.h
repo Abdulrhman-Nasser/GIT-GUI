@@ -21,6 +21,8 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
+#include <QtWidgets/QSplitter>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
@@ -44,11 +46,15 @@ public:
     QLabel *L_username;
     QLineEdit *LE_username;
     QHBoxLayout *horizontalLayout_2;
-    QLabel *L_;
+    QLabel *L_email;
     QLineEdit *LE_email;
     QHBoxLayout *horizontalLayout_3;
-    QLabel *L_path_4;
+    QLabel *L_url;
     QLineEdit *LE_url;
+    QSplitter *splitter;
+    QLabel *L_light;
+    QSlider *horizontalSlider;
+    QLabel *L_dark;
     QWidget *init;
     QListWidget *listWidget;
     QPushButton *pb_clear;
@@ -111,7 +117,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(874, 640);
+        MainWindow->resize(921, 697);
         MainWindow->setStyleSheet(QString::fromUtf8(""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
@@ -124,7 +130,7 @@ public:
         Select_Path->setObjectName("Select_Path");
         pb_start = new QPushButton(Select_Path);
         pb_start->setObjectName("pb_start");
-        pb_start->setGeometry(QRect(310, 460, 171, 41));
+        pb_start->setGeometry(QRect(340, 460, 171, 41));
         pb_path = new QPushButton(Select_Path);
         pb_path->setObjectName("pb_path");
         pb_path->setGeometry(QRect(610, 50, 131, 29));
@@ -133,6 +139,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(pb_path->sizePolicy().hasHeightForWidth());
         pb_path->setSizePolicy(sizePolicy);
+        pb_path->setStyleSheet(QString::fromUtf8(""));
         L_path = new QLabel(Select_Path);
         L_path->setObjectName("L_path");
         L_path->setGeometry(QRect(31, 52, 541, 20));
@@ -151,6 +158,7 @@ public:
         horizontalLayout->setObjectName("horizontalLayout");
         L_username = new QLabel(layoutWidget);
         L_username->setObjectName("L_username");
+        L_username->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout->addWidget(L_username);
 
@@ -164,10 +172,10 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        L_ = new QLabel(layoutWidget);
-        L_->setObjectName("L_");
+        L_email = new QLabel(layoutWidget);
+        L_email->setObjectName("L_email");
 
-        horizontalLayout_2->addWidget(L_);
+        horizontalLayout_2->addWidget(L_email);
 
         LE_email = new QLineEdit(layoutWidget);
         LE_email->setObjectName("LE_email");
@@ -179,10 +187,10 @@ public:
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
-        L_path_4 = new QLabel(layoutWidget);
-        L_path_4->setObjectName("L_path_4");
+        L_url = new QLabel(layoutWidget);
+        L_url->setObjectName("L_url");
 
-        horizontalLayout_3->addWidget(L_path_4);
+        horizontalLayout_3->addWidget(L_url);
 
         LE_url = new QLineEdit(layoutWidget);
         LE_url->setObjectName("LE_url");
@@ -192,31 +200,48 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_3);
 
+        splitter = new QSplitter(Select_Path);
+        splitter->setObjectName("splitter");
+        splitter->setGeometry(QRect(630, 470, 148, 20));
+        splitter->setOrientation(Qt::Horizontal);
+        L_light = new QLabel(splitter);
+        L_light->setObjectName("L_light");
+        splitter->addWidget(L_light);
+        horizontalSlider = new QSlider(splitter);
+        horizontalSlider->setObjectName("horizontalSlider");
+        sizePolicy.setHeightForWidth(horizontalSlider->sizePolicy().hasHeightForWidth());
+        horizontalSlider->setSizePolicy(sizePolicy);
+        horizontalSlider->setMaximum(1);
+        horizontalSlider->setOrientation(Qt::Horizontal);
+        splitter->addWidget(horizontalSlider);
+        L_dark = new QLabel(splitter);
+        L_dark->setObjectName("L_dark");
+        splitter->addWidget(L_dark);
         stackedWidget->addWidget(Select_Path);
         init = new QWidget();
         init->setObjectName("init");
         listWidget = new QListWidget(init);
         listWidget->setObjectName("listWidget");
-        listWidget->setGeometry(QRect(0, 20, 411, 551));
+        listWidget->setGeometry(QRect(0, 40, 411, 561));
         listWidget->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
         listWidget->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
         listWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
         listWidget->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
         pb_clear = new QPushButton(init);
         pb_clear->setObjectName("pb_clear");
-        pb_clear->setGeometry(QRect(490, 550, 80, 24));
+        pb_clear->setGeometry(QRect(490, 600, 80, 24));
         pb_back = new QPushButton(init);
         pb_back->setObjectName("pb_back");
-        pb_back->setGeometry(QRect(730, 550, 80, 24));
+        pb_back->setGeometry(QRect(730, 600, 80, 24));
         L_currentpath = new QLabel(init);
         L_currentpath->setObjectName("L_currentpath");
         L_currentpath->setGeometry(QRect(0, 0, 841, 21));
         groupBox = new QGroupBox(init);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(540, 30, 311, 251));
+        groupBox->setGeometry(QRect(540, 30, 311, 311));
         layoutWidget1 = new QWidget(groupBox);
         layoutWidget1->setObjectName("layoutWidget1");
-        layoutWidget1->setGeometry(QRect(0, 30, 311, 253));
+        layoutWidget1->setGeometry(QRect(0, 30, 311, 281));
         verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -287,7 +312,7 @@ public:
 
         groupBox_2 = new QGroupBox(init);
         groupBox_2->setObjectName("groupBox_2");
-        groupBox_2->setGeometry(QRect(420, 290, 431, 261));
+        groupBox_2->setGeometry(QRect(420, 340, 431, 261));
         gridLayout_3 = new QGridLayout(groupBox_2);
         gridLayout_3->setObjectName("gridLayout_3");
         horizontalLayout_7 = new QHBoxLayout();
@@ -441,13 +466,20 @@ public:
         verticalLayout_5->addWidget(LE_createbranch);
 
         stackedWidget->addWidget(init);
+        listWidget->raise();
+        pb_clear->raise();
+        pb_back->raise();
+        L_currentpath->raise();
+        groupBox_2->raise();
+        groupBox_3->raise();
+        groupBox->raise();
 
-        gridLayout_2->addWidget(stackedWidget, 0, 0, 1, 1);
+        gridLayout_2->addWidget(stackedWidget, 0, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 874, 25));
+        menubar->setGeometry(QRect(0, 0, 921, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -469,12 +501,14 @@ public:
         pb_start->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
         pb_path->setText(QCoreApplication::translate("MainWindow", "Folder", nullptr));
         L_path->setText(QCoreApplication::translate("MainWindow", "Please choose a path", nullptr));
-        L_username->setText(QCoreApplication::translate("MainWindow", "Enter User Name", nullptr));
+        L_username->setText(QCoreApplication::translate("MainWindow", "User Name ", nullptr));
         LE_username->setText(QString());
-        L_->setText(QCoreApplication::translate("MainWindow", "       Enter Email", nullptr));
+        L_email->setText(QCoreApplication::translate("MainWindow", "  E-mail      ", nullptr));
         LE_email->setText(QString());
-        L_path_4->setText(QCoreApplication::translate("MainWindow", "            Enter url", nullptr));
+        L_url->setText(QCoreApplication::translate("MainWindow", "URL            ", nullptr));
         LE_url->setText(QString());
+        L_light->setText(QCoreApplication::translate("MainWindow", "Light", nullptr));
+        L_dark->setText(QCoreApplication::translate("MainWindow", "Dark", nullptr));
         pb_clear->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
         pb_back->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         L_currentpath->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
